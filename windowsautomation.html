@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Modified by John Nguyen
+-->
+<html>
+	<head>
+		<title>Windows Automation - John Nguyen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="index.html">Microsoft Windows Automation</a></h1>
+							<p>Using Powershell and Batch</p>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Home</a></li>
+							<li><a href="index.html#main">About Me</a></li>
+							<li><a href="resume.html">Resumé</a></li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="sharepoint.html">Sharepoint</a></li>
+									<li><a href="windowsautomation.html">Windows Automation</a></li>
+									<li><a href="raspberrypimotionsensor.html">Raspberry Pi Motion Sensor</a></li>
+									<li><a href="discordbot.html">Discord Bot</a></li>
+								</ul>
+							</li>
+							<li><a href="classprogression.html">Class Progression</a></li>
+							<li><a href="#footer">Contact Me</a></li>
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Overview</div>
+					<div class="container">
+						<div class="row gtr-150">
+							<div class="col-8 col-12-medium">
+
+								<!-- Content -->
+									<div id="content">
+										<article class="box post">
+											<h2>Introduction</h2>
+											<p>As an information technology intern at Sikorsky, a Lockheed Martin Company, one of my goals
+												was to increase the efficiency of essential IT tasks. This project was not directly assigned
+												to me by any superior and was actually self-assigned. My superiors found the solutions viable and 
+												continued to support me throughout its development and distribution.
+											</p>
+											<h2>Why Powershell?</h2>
+											<p>One key time-consuming task was the onboarding process for new assets. This included the 
+												mapping of network drives, setting default printer queues, importing facility needed shortcuts, 
+												and more. These tasks required lots of manual entry and were operating system based. Automating 
+												windows with common languages would often require the installation of IDEs and the languages had to 
+												be set up in the environment variables. I needed a language that came with Windows and was efficient 
+												in automating Windows tasks. I eventually found that Powershell was more streamlined than batch scripts 
+												and were directly supported by modern Microsoft Documentation and official Windows Administration.
+											</p>
+											<h2>Project Goals</h2>
+											<p>
+											-Create a clickable solution to automate simple Windows tasks <br>
+											-Distribute the solution to the entire facility <br>
+											-Maintain security and integrity of Lockheed Martin assets <br>
+											-(optional) create a GUI for each script to increase usability <br>
+											-Document scripts to ensure proper future maintenance <br>
+											</p>
+											<h2>Scripts and What They Automate</h2>
+											-Set Shortcuts and Favorites on either the desktop or User profile Favorites
+											<br>
+											-Set Default Printer <br>
+											-Set Time zone to local region <br>
+											-Create an email that grabs hostname and ID of user to send to IT <br>
+											-Display common computer info needed whenever user needed to report an issue with their assets <br>
+											-Copy User's files and upload them to a cloud server as a backup <br>
+											-Download the backup onto a new asset <br>
+											-Count the amount of User profiles that have been made for each asset <br>
+											-Enable selection of different monitor display options <br>
+											-Map Common drive and other department drives <br>
+											-Update an atomsvc file to current date <br>
+											<h2>Visibility and Usability</h2>
+											<p>
+											Most end-users do not know anything about Powershell scripts. There are couple of things preventing its easy use as a 
+											layer of security employed by Microsoft to prevent the running of unwanted and possibly dangerous scripts. 
+											Powershell (.ps1) files do not open with Powershell by default and instead open with notepad. 
+											This means users must right click the file and run with it with Powershell instead of double clicking the file.
+											Additionally, if the script originates outside the organization, User account control might ask if the user wants to run this file.
+											Even further, if the user runs the script, they must confirm the execution policy. Providing all of these instructions
+											to an end-user would reduce their desire to use the tools in the first place. The solution I found was to launch 
+											Powershell scripts from a batch script. Batch scripts can be double clicked and launched by default and 
+											have the functionality to bypass the execution policy in Powershell. Now the scripts acted just like any 
+											other file on Windows, but neither Batch nor Powershell scripts can be emailed. The solution to increasing visibility and 
+											awareness was to upload the scripts onto the newly created <a href="sharepoint.html">Sharepoint site</a> I made, and have buttons under the IT department
+											pointing directly to the file. Later, I improved the scripts to be in the form of a GUI so the scripts would look much less intimidating
+											to the untrained eye.
+											</p>
+											<h2>Security</h2>
+											<p>	I managed to bypass all of the security measures Microsoft put in but those measures were there for a reason. Users shouldn't just 
+												trust every batch script they see. However, users will have to download the scripts in order to run them. I solved this problem by having the 
+												batch script delete itself after the Powershell window is closed. This way, users won't see batch scripts laying around in their Downloads folder.
+												The problem hasn't been totally resolved but this means the user won't go in and edit it. Additionally, since the Batch scripts are 
+												located on Sharepoint, users will need access to the Sharepoint site to access the scripts. This means they will be trusted employees.
+												Even further, the Batch scripts are locked for editing to administrators only. Note that the Batch scripts are only used to call the Powershell scripts,
+												which are stored in a cloud server that a user must also have access to. If a malicious user accessed the Powershell script on the cloud server, there would be a 
+												problem, however, these scripts are locked for read only and are in a hidden folder. Only users who really know what they are doing will be able to find and edit the Powershell scripts.
+											</p>
+											<h2>Conclusion</h2>
+											<p>This project is still being worked on today. Onboarding processes usually occur whenever a new employee arrives or 
+												a user receives a replacement asset. These scripts have not found an active place in their daily workflow. However,
+												these scripts do help reduce the IT department's concerns in remembering exact print queues, links, drive names, and more.
+												Especially in the time of this pandemic, these scripts offer real solutions that a real IT personnel would provide, all while 
+												being online and in the hands of the user alone. The development process is over but my role now is to advocate
+												the use of these automated solutions.
+											</p>
+										
+										</article>
+										<div class="row gtr-150">
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<header>
+														<h2>Powershell GUI</h2>
+													</header>
+													<a href="#" class="image featured"><img src="images/powershell.png" alt="" /></a>
+													<p>All Powershell GUIs in this project follow a similar format.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<header>
+														<h2>Command Prompt Host</h2>
+													</header>
+													<a href="#" class="image featured"><img src="images/cmd.png" alt="" /></a>
+													<p>The command prompt is necessary to launch the Powershell script and needs to run in the background. </p>
+
+												</section>
+											</div>
+										</div>
+									</div>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<div id="sidebar">
+										
+										<section class="box">
+											<header>
+												<h2>Contributors and Testors</h2>
+											</header>
+											<ul class="style2">
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/photoid.jpg" alt="" /></a>
+														<h3><a href="#">John Nguyen - IT Intern</a></h3>
+														<p>Author of every Powershell and Batch Script used in this project</p>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic09.jpg" alt="" /></a>
+														<h3><a href="#">Lenon Bryant - Systems Engineer Sr</a></h3>
+														<p>Primary testor, advocate, and supporter for the automation scripts.</p>
+													</article>
+												</li>
+												
+											</ul>
+										
+										</section>
+										<section class="box">
+											<header>
+												<h2>Resources</h2>
+											</header>
+											<ul class="style3">
+												<li><a href="https://www.howtogeek.com/204088/how-to-use-a-batch-file-to-make-powershell-scripts-easier-to-run/">Launching Powershell with Batch</a></li>
+												<li><a href="https://www.howtogeek.com/118452/how-to-map-network-drives-from-the-command-prompt-in-windows/">Mapping Network Drives Using Batch</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/scripting/samples/working-with-printers?view=powershell-7.1">Setting Default Printer With Powershell</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-7.1">Copying Files Using Powershell</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-7.1">Sending Email Using Powershell</a></li>
+												<li><a href="https://ss64.com/nt/displayswitch.html">Monitor Display Set Up</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1">Setting Time Zone Using Powershell</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.1">Counting Objects Using Powershell</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-content?view=powershell-7.1">Writing to Text Files Using Powershell</a></li>
+												<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.1">Getting Hostname and Username</a></li>
+											</ul>
+										</section>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Highlights -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">Other Projects</div>
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="sharepoint.html" class="image featured"><img src="images/sharepoint.png" alt="" /></a>
+									<h3><a href="sharepoint.html">Sharepoint Site</a></h3>
+									<p>I was tasked with creating and administering a new Sharepoint site equipped with Infopath forms.</p>
+									<ul class="actions">
+										<li><a href="sharepoint.html" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="raspberrypimotionsensor.html" class="image featured"><img src="images/raspberrypi.jpg" alt="" /></a>
+									<h3><a href="raspberrypimotionsensor.html">Raspberry Pi Motion Sensor</a></h3>
+									<p>My partner and I challenged ourselves in creating a motion sensor with automated notifications.</p>
+									<ul class="actions">
+										<li><a href="raspberrypimotionsensor.html" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="discordbot.html" class="image featured"><img src="images/discord.png" alt="" /></a>
+									<h3><a href="discordbot.html">Discord Bot</a></h3>
+									<p>I created a personalized Discord Bot to bring enjoyment to a gaming community.</p>
+									<ul class="actions">
+										<li><a href="discordbot.html" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer" class="wrapper">
+				<div class="title">Contact Me</div>
+				<div class="container">
+					<header class="style1">
+						<h2>Questions? Comments? Concerns?</h2>
+						<p>
+							Connections are important! I am always open to suggestions and addressing any concerns. Feel feel to reach out to me in any of the ways below!
+						</p>
+					</header>
+					<div class="row">
+						<div class="col-6 col-12-medium">
+
+							<!-- Contact Form -->
+								<section>
+									<form method="post" action="#">
+										<div class="row gtr-50">
+											<div class="col-6 col-12-small">
+												<input type="text" name="name" id="contact-name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-small">
+												<input type="text" name="email" id="contact-email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+											</div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="style1" value="Send" /></li>
+													<li><input type="reset" class="style2" value="Reset" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</section>
+
+						</div>
+						<div class="col-6 col-12-medium">
+
+							<!-- Contact -->
+								<section class="feature-list small">
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-home">Mailing Address</h3>
+												<p>
+												
+													3412 Carnation Ct<br />
+													Grand Prairie, TX 75052
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-comment">Social</h3>
+												<p>
+													<a href="https://www.linkedin.com/in/john-nguyen-2b8315191/">LinkedIn</a><br />
+													<a href="https://github.com/J4ninja">Github</a><br />
+													<a href="https://www.instagram.com/j4.nguyen/">Instagram</a>
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-envelope">Email</h3>
+												<p>
+													<a href="mailto:j4nguyen134@gmail.com">j4nguyen134@gmail.com</a>
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-phone">Phone</h3>
+												<p>
+													(617) 389-0290
+												</p>
+											</section>
+										</div>
+									</div>
+								</section>
+
+						</div>
+					</div>
+					<div id="copyright">
+						<ul>
+							<li>&copy; J4 Incorporated.</li><li>2021</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
