@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Sharepoint Site - John Nguyen</title>
+		<title>Layered Laser Defense - John Nguyen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel='shortcut icon' type='image/png' href='images/favicon-32x32.png' />
@@ -21,7 +21,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Sharepoint Site</a></h1>
+							<h1><a href="index.html">Layered Laser Defense</a></h1>
 							<p></p>
 						</div>
 
@@ -59,56 +59,50 @@
 									<div id="content">
 										<article class="box post">
 											<h2>Introduction</h2>
-											<p>As an information technology intern at Sikorsky, a Lockheed Martin Company, I was tasked with redesigning a new Sharepoint site
-												for the facility to use. This facility, formly known as Composite Technology Inc, was acquired by Sikorsky and needed to migrate to
-												its own independent Sharepoint site. This new Sharepoint site, would have Lockheed Martin branding and new features to improve daily workflow
-												for our end users.
+											<p>As a Software Engineer Intern at Lockheed Martin Missiles and Fire Control, I was placed on the Layered Laser Defense project.
+                                                The goal of the project is to build a laser turret that can be used to disable incoming drones, missiles, and other aerial technologies,
+                                                for defense purposes. Due to the nature of Lockheed Martin technologies, I may not discuss proprietary information on this page. However, I will 
+                                                summarize my responsibilities, contributions, and what I learned while working on this project. 
 											</p>
-											<h2>Sharepoint Site Requirements</h2>
+											<h2>Workflow and the Agile Software Development Cycle</h2>
 											<p>
-											-Color Scheme must match Sikorsky/Lockheed Martin branding <br>
-											-Must have pages for all departments <br>
-											-Each department page must feature a quick link list <br>
-											-Each department page must include a photo of the department manager <br>
-											-Each department page would have buttons linked to forms <br>
-											-Redesign old Sharepoint lists and forms <br>
-											-Increase security and user accountability <br>
-											-Streamline functionality for maintenance <br>
-											-Smoothly transition users to the new site
+											-Daily morning scrum meetings to report on blockers and daily tasks<br>
+											-Weekly team meetings to report on status <br>
+											-Monthly sprint planning for minor releases <br>
+											-Utilzing Jira to organize, assign, and report tasks for each sprint <br>
+											-Using an isolated development desktop environment <br>
+											-Utilizing GitLab to handle merge requests and peer review<br>
+											-Performing unit tests on development environment <br>
+											-Performing integration tests on actual lab chassis <br>
 											</p>
-											<h2>Design</h2>
-											<p>While I was given specific requirements for each page, I was also left with lots of freedom and time 
-												to design the pages however I wanted. This would be my first website and I had no experience in web development
-												prior. I chose to design the website as if it was a public company website even if it would only be visible to our 
-												employees. I decided to add a carousel featuring many Sikorsky helicopters onto the home page. Additionally, I made 
-												custom banners with icons for each department. Furthermore, the quick links list were styled as buttons. Some pages featured calendars. 
-												Finally, I added a carousel for announcements for each department. 
+											<h2>General Tasks</h2>
+											<p>During the first few weeks of the internship, I was assigned minor "nice to have" tasks to implement into the main executive GUI. These features were written in Java and 
+                                                were not required nor a big priority for our senior developers to work on so they were perfect to get me started. While they were minor in priority,
+                                                they are likely to be greatly appreciated since these are what the operators actually see while using the GUI. Generally, this involved redesigning labels,
+                                                adding unit configurable conversions, and working with button functionality. Later on, I was assigned tasks involving build scripts using the GitLab pipeline,
+                                                CMakeLists, and Gradle. Outside of source code tasks, I've worked on building Linux OS images, testing and deploying physical hardware (Hand Controller), and some bug fixes. 
 											</p>
-											<h2>InfoPath</h2>
-											<p>Another requirement for the new page was to create new request forms similar to the old one but with the color scheme and new features.
-												Sharepoint lists and forms come with textfield boxes, checkboxes, and dropdowns out of the box but it was no dynamic and did not check for 
-												user roles. My task was to create new forms that had the exact textfields, checkboxes, and dropdowns as the old one and add onto them. Using 
-												InfoPath, I was able to create a dynamic form that would change as the form when through different phases such as Submission -> Approval -> Completion. 
-												The form's appearance would change the next time it was opened with new fields as it reached its next phase. Additionally, the form would read
-												the user's roles to make sure they were allowed to approve the request. These improved user accountability and removed possible mistakes. 
-											</p>
-											<h2>Deployment</h2>
-											<p>The site's development took around 3 months and was ready to deploy. In order to migrate the users to the new site, I was given admin access to the old site
-												and created an announcement featuring the changes and the new link. I also worked with others to hide the old site's lists and links to appear disabled. 
-												Then, once users started using the new link, the site owner would approve their access permissions.
-											</p>
-											<h2>Post-Deployment</h2>
-											<p>After all employees have migrated to the new site, I had to diagnose any issues and address any concerns they had. Many users
-												did not like the new change as it restricted their workflow, however, these measures had to be in place for security and proper 
-												permissions had to be approved. Once things settled down, I worked on creating entirely new forms and other content types that 
-												departments wanted added to the site. I also used the site to streamline IT concerns by designing the IT page to host 
-												<a href="windowsautomation.html">my automated solutions</a> 
-												and other Lockheed Martin services.  
-											</p>
+											<h2>Some Things I Learned</h2>
+											<p>
+                                                -Git/GitLab<br>
+                                                -Agile Software Development Cycle<br>
+                                                -How to work with large codebases<br>
+                                                -More intermediate Java GUI practices<br>
+                                                -Intro to CMake & Gradle<br>
+                                                -Intro to C++<br>
+                                                -Unit & Integration Testing<br>
+                                                -VMWare & intro to Linux<br>
+                                                -Intro to middle end tools such as RTI Connext<br>
+                                                -Intro to automative python and batch scripting<br>
+                                                -Intro to embedded systems<br>
+                                                -Working with a team<br>
+                                                </p>
 											<h2>Conclusion</h2>
-											<p>As mentioned above, this was the first website I developed and was a great learning experience. It was not developed with pure html and css nor drag and drop but rather
-												in the Microsoft fashion of inserting needed elements. I gained lots of recognition at the facility and was well respected. The facility did not have any local professional developers and I was given a large amount of control. 
-												I am glad that this project was assigned to me as an intern. 
+											<p>This internship has been a very valuable experience in my career path. My code will remain in the codebase leaving a real impact. 
+                                                I was also able to expand our engineering effort and efficiency. Thanks to my contributions, I was given an offer to extend my internship throughout the fall semester!
+                                                I hope to continue working with Lockheed Martin and possibly move into Classified areas.
+											</p>
+
 												
 											</p>
 										</article>
@@ -116,19 +110,19 @@
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Home Page</h2>
+														<h2>Generic (NON Lockheed Martin) Target Acquisition GUI</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/.png" alt="" /></a>
-													<p>Home Page featuring carousel and General Manager.</p>
+													<a href="#" class="image featured"><img src="images/reticle.jpg" alt="" /></a>
+													<p>An image of the type of GUI that I worked with (not actual)</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Generic InfoPath Form</h2>
+														<h2>Generic (NON Lockheed Martin) Military Hand Controller</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/.png" alt="" /></a>
-													<p>All forms followed this color scheme and general outline.</p>
+													<a href="#" class="image featured"><img src="images/hc.jpg" alt="" /></a>
+													<p>A sample image of the type of military hand controller (not actual) I used to test my changes</p>
 
 												</section>
 											</div>
@@ -149,24 +143,24 @@
 												<li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Lisa Wenske - Former Site Owner</a></h3>
-														<p>Provided instructions, general outline, and expectations for the site. </p>
+														<h3><a href="#">De Do - Program Mentor</a></h3>
+														<p>Assigned tasks, provided guidance to get started, and reviewed code</p>
 														<br>
 													</article>
 												</li>
 												<li>
 													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/photoid.jpg" alt="" /></a>
-														<h3><a href="#">John Nguyen - Former IT Intern</a></h3>
-														<p>Primary designer and secondary administrator for the Sharepoint site and InfoPath forms.</p>
+														<a href="#" class="image left"><img src="images/linkedinpfp.jfif" alt="" /></a>
+														<h3><a href="#">John Nguyen - Software Engineer Intern</a></h3>
+														<p>Redesigned GUI elements and implemented new features and bug fixes into the codebase</p>
 														<br>
 													</article>
 												</li>
 												<li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic09.jpg" alt="" /></a>
-														<h3><a href="#">Steven Swarter - Sharepoint Expert</a></h3>
-														<p>Provided guidance for managing Sharepoint pages and creating InfoPath forms.</p>
+														<h3><a href="#">Other</a></h3>
+														<p>There are many contributors to this project and cannot be all mentioned</p>
 
 													</article>
 												</li>
@@ -179,11 +173,8 @@
 												<h2>Resources</h2>
 											</header>
 											<ul class="style3">
-												<li><a href="https://support.microsoft.com/en-us/office/get-started-with-sharepoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261">Getting Started</a></li>
-												<li><a href="https://support.microsoft.com/en-us/office/introduction-to-lists-0a1c3ace-def0-44af-b225-cfa8d92c52d7">Sharepoint Lists</a></li>
-												<li><a href="https://kb.uwstout.edu/page.php?id=87749#:~:text=Creating%20a%20SharePoint%20Calendar&text=Once%20you%20are%20on%20the,and%20select%20Add%20an%20App.&text=You%20will%20be%20presented%20with,Name%20your%20calendar.">Sharepoint Calendar</a></li>
-												<li><a href="https://support.microsoft.com/en-us/office/introduction-to-infopath-forms-services-e599b4f0-1d1d-4249-8251-5d28afb648d8">InfoPath Intro</a></li>
-												
+												<li><a href="https://www.lockheedmartin.com/en-us/capabilities/directed-energy/laser-weapon-systems.html">Laser Weapon Systems</a></li>
+												<li><a href="https://www.defensedaily.com/lockheed-martin-nabs-22-million-contract-layered-laser-defense-prototype-lcs/uncategorized/">LLD on Littoral Combat Ship (LCS)</a></li>
 											</ul>
 										</section>
 									</div>
@@ -200,11 +191,11 @@
 						<div class="row aln-center">
 							<div class="col-3 col-12-medium">
 								<section class="highlight">
-									<a href="layerlaserdefense.html" class="image featured"><img src="images/LLD.jpg" alt="" /></a>
-									<h3><a href="layerlaserdefense.html">Layered Laser Defense</a></h3>
-									<p>I was tasked with redesigning, implementing new features, and fixing bugs for the main laser turret executive GUI.</p>
+									<a href="sharepoint.html" class="image featured"><img src="images/sharepoint.png" alt="" /></a>
+									<h3><a href="sharepoint.html">Sharepoint Site</a></h3>
+									<p>I was tasked with creating and administering a new Sharepoint site equipped with Infopath forms.</p>
 									<ul class="actions">
-										<li><a href="layerlaserdefense.html" class="button style1">Learn More</a></li>
+										<li><a href="sharepoint.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
@@ -238,6 +229,7 @@
 										<li><a href="discordbot.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -289,16 +281,16 @@
 											<section>
 												<h3 class="icon solid fa-address-card">Business</h3>
 												<p>
-													<a href="https://www.linkedin.com/in/john-nguyen-2b8315191/">LinkedIn</a><br />
+                                                    <a href="https://www.linkedin.com/in/john-nguyen-2b8315191/">LinkedIn</a><br />
 													<a href="https://github.com/J4ninja">Github</a><br />
 												</p>
 											</section>
 										</div>
-										<div class="col-6 col-12-small">
+										<div class="col-6 col-14-small">
 											<section>
 												<h3 class="icon solid fa-comment">Social</h3>
 												<p>
-													<a href="https://www.instagram.com/j4.nguyen/">Instagram</a>
+													<a href="https://www.instagram.com/j4.nguyen/">Instagram</a><br />
 													<a href="https://www.facebook.com/profile.php?id=100065121758952">FaceBook</a>
 												</p>
 											</section>
