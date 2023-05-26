@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Sharepoint Site - John Nguyen</title>
+		<title>SuperFrog Student Scheduler - John Nguyen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel='shortcut icon' type='image/png' href='images/favicon-32x32.png' />
@@ -21,7 +21,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Sharepoint Site</a></h1>
+							<h1><a href="index.html">Superfrog Student Scheduler</a></h1>
 							<p></p>
 						</div>
 
@@ -35,7 +35,8 @@
 								<a href="#">Projects</a>
 								<ul>
 									<li><a href="layerlaserdefense.html">Layered Laser Defense</a></li>
-									<li><a href="iosapps.html">IOS Apps</a></li>
+									<li><a href="superfrogscheduler.html">SuperFrog Student Scheduler</a></li>
+                                    <li><a href="iosapps.html">IOS Apps</a></li>
                                     <li><a href="sharepoint.html">Sharepoint</a></li>
                                     <li><a href="windowsautomation.html">Windows Automation</a></li>
                                     <li><a href="raspberrypimotionsensor.html">Raspberry Pi Motion Sensor</a></li>
@@ -60,76 +61,75 @@
 									<div id="content">
 										<article class="box post">
 											<h2>Introduction</h2>
-											<p>As an information technology intern at Sikorsky, a Lockheed Martin Company, I was tasked with redesigning a new Sharepoint site
-												for the facility to use. This facility, formly known as Composite Technology Inc, was acquired by Sikorsky and needed to migrate to
-												its own independent Sharepoint site. This new Sharepoint site, would have Lockheed Martin branding and new features to improve daily workflow
-												for our end users.
-											</p>
-											<h2>Sharepoint Site Requirements</h2>
 											<p>
-											-Color Scheme must match Sikorsky/Lockheed Martin branding <br>
-											-Must have pages for all departments <br>
-											-Each department page must feature a quick link list <br>
-											-Each department page must include a photo of the department manager <br>
-											-Each department page would have buttons linked to forms <br>
-											-Redesign old Sharepoint lists and forms <br>
-											-Increase security and user accountability <br>
-											-Streamline functionality for maintenance <br>
-											-Smoothly transition users to the new site
+                                                While taking the Web Technologies course at TCU, we were assigned a group project. The assignment was
+                                                to develop a full functioning website. This website would be used to schedule a SuperFrog Student Appearance 
+                                                (TCU's Mascot). This is important to TCU as their policy mandates that there can only be one SuperFrog in the 
+                                                world at any time. We would need to create forms for customers to request an appearance for events such as weddings
+                                                and sporting events. Then we needed a database to store these forms and create student and admin accounts to manage 
+                                                these forms. With six members on our team, we each became fullstack developers working with Vue.js as our frontend
+                                                and Spring Boot as our backend.
 											</p>
-											<h2>Design</h2>
-											<p>While I was given specific requirements for each page, I was also left with lots of freedom and time 
-												to design the pages however I wanted. This would be my first website and I had no experience in web development
-												prior. I chose to design the website as if it was a public company website even if it would only be visible to our 
-												employees. I decided to add a carousel featuring many Sikorsky helicopters onto the home page. Additionally, I made 
-												custom banners with icons for each department. Furthermore, the quick links list were styled as buttons. Some pages featured calendars. 
-												Finally, I added a carousel for announcements for each department. 
+                                            <h2>API-First Approach</h2>
+                                            <p>
+                                                Our team believed in the API-first approach. APIs are the contract between the frontend and backend developers. 
+                                                This approach allows developers to work independently of each other and work solely to developing features that utilize the API.
+                                                We wanted our API to be RESTful. We developed our API documentation using a yml file. The API was written before any single
+                                                line of code was written.
+                                            </p>
+											<h2>Agile Workflow</h2>
+											<p>
+											-Created User stories on GitHub issues and assigned to a team member<br>
+											-Worked on indepedent feature branches<br>
+											-Performed pull requests and reviews<br>
+											-Communicated story status<br>
+											-Merged branches onto file project<br>
 											</p>
-											<h2>InfoPath</h2>
-											<p>Another requirement for the new page was to create new request forms similar to the old one but with the color scheme and new features.
-												Sharepoint lists and forms come with textfield boxes, checkboxes, and dropdowns out of the box but it was no dynamic and did not check for 
-												user roles. My task was to create new forms that had the exact textfields, checkboxes, and dropdowns as the old one and add onto them. Using 
-												InfoPath, I was able to create a dynamic form that would change as the form when through different phases such as Submission -> Approval -> Completion. 
-												The form's appearance would change the next time it was opened with new fields as it reached its next phase. Additionally, the form would read
-												the user's roles to make sure they were allowed to approve the request. These improved user accountability and removed possible mistakes. 
+											<h2>Backend</h2>
+											<p>
+                                                The backend was built using Spring Boot (Java). Using the Spring Framework, we can easily manage dependencies by having Spring inject them. We had the 
+                                                Spring JPA repository handle our database by automatically converting our annotated entities into SQL tables. The backend was developed using the Test 
+                                                Driven Development schema. I would write out tests before writing a feature then implement just enough code to pass the test. After writing a feature, I 
+                                                would launch the app locally and used Postman to mimic the API calls. The backend would also handle security. Authorization and authentication using a JWT
+                                                was our choice.
 											</p>
-											<h2>Deployment</h2>
-											<p>The site's development took around 3 months and was ready to deploy. In order to migrate the users to the new site, I was given admin access to the old site
-												and created an announcement featuring the changes and the new link. I also worked with others to hide the old site's lists and links to appear disabled. 
-												Then, once users started using the new link, the site owner would approve their access permissions.
-											</p>
-											<h2>Post-Deployment</h2>
-											<p>After all employees have migrated to the new site, I had to diagnose any issues and address any concerns they had. Many users
-												did not like the new change as it restricted their workflow, however, these measures had to be in place for security and proper 
-												permissions had to be approved. Once things settled down, I worked on creating entirely new forms and other content types that 
-												departments wanted added to the site. I also used the site to streamline IT concerns by designing the IT page to host 
-												<a href="windowsautomation.html">my automated solutions</a> 
-												and other Lockheed Martin services.  
-											</p>
+                                            <h2>Frontend</h2>
+                                            <p>
+                                                The frontend was built using Vue.js. We componentized parts of the website to be able to reuse any components on our pages. Vue components contain 
+                                                HTML elements, css scoped styles pertaining to that component, and JavaScript to create Vue instances and mount data onto an app. The frontend made API 
+                                                calls using the axios library. 
+                                            </p>
 											<h2>Conclusion</h2>
-											<p>As mentioned above, this was the first website I developed and was a great learning experience. It was not developed with pure html and css nor drag and drop but rather
-												in the Microsoft fashion of inserting needed elements. I gained lots of recognition at the facility and was well respected. The facility did not have any local professional developers and I was given a large amount of control. 
-												I am glad that this project was assigned to me as an intern. 
-												
+											<p>
+                                                This course was a great introduction to fullstack development with a team. The instructor laid out the documentation to mimic a client request for an application.
+                                                After that, the team was left with no starter code and had to figure out how to work together. I learned that when working with a member that isn't performing their assigned task,
+                                                we shouldn't just boss them around. We should convince them of the overall benefit of performing their task, be understanding if they are lost and offer help if necessary. There were
+                                                many times where we peer programmed. Git branches were very important in the success of our independent development. Overall, the project was a success and we received full credit. 
+                                                Additionally, we hosted it fully online!
+											</p>
+	
+                                            <h2>Demo Video</h2>
+                                            <iframe width="500" height="315" src="https://www.youtube.com/embed/uW-3g06aQNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 											</p>
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Home Page</h2>
+														<h2>Landing Page</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/.png" alt="" /></a>
-													<p>Home Page featuring carousel and General Manager.</p>
+													<a href="#" class="image featured"><img src="images/superfroglandingpage.png" alt="" /></a>
+													<p>Landing page</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Generic InfoPath Form</h2>
+														<h2>API</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/.png" alt="" /></a>
-													<p>All forms followed this color scheme and general outline.</p>
+													<a href="#" class="image featured"><img src="images/API_Doc.png" alt="" /></a>
+
+													<p>Sample of API documentation</p>
 
 												</section>
 											</div>
@@ -149,29 +149,48 @@
 											<ul class="style2">
 												<li>
 													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/linkedinpfp.jfif" alt="" /></a>
+														<h3><a href="#">John Nguyen - Lead</a></h3>
+														<p>Assigned use cases, developed backend, and assisted in frontend</p>
+														<br>
+													</article>
+												</li>
+											
+                                                <li>
+													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Lisa Wenske - Former Site Owner</a></h3>
-														<p>Provided instructions, general outline, and expectations for the site. </p>
+														<h3><a href="#">John Henry Meija - Co-Lead</a></h3>
+														<p>Wrote RESTful API, developed pricing page, range page, admin view of requests</p>
 														<br>
 													</article>
 												</li>
-												<li>
-													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/photoid.jpg" alt="" /></a>
-														<h3><a href="#">John Nguyen - Former IT Intern</a></h3>
-														<p>Primary designer and secondary administrator for the Sharepoint site and InfoPath forms.</p>
-														<br>
-													</article>
-												</li>
-												<li>
-													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/pic09.jpg" alt="" /></a>
-														<h3><a href="#">Steven Swarter - Sharepoint Expert</a></h3>
-														<p>Provided guidance for managing Sharepoint pages and creating InfoPath forms.</p>
 
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Mann Patel - Fullstack Developer</a></h3>
+														<p>Handled CSS and developed student portal</p>
+														<br>
 													</article>
 												</li>
-												
+
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Ty Donelly - Fullstack Developer</a></h3>
+														<p>Created Appearance Request Forms</p>
+														<br>
+													</article>
+												</li>
+
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Ali Gasmali - Fullstack Developer</a></h3>
+														<p>Handled student and admin account creation</p>
+														<br>
+													</article>
+												</li>
 											</ul>
 										
 										</section>
@@ -180,11 +199,9 @@
 												<h2>Resources</h2>
 											</header>
 											<ul class="style3">
-												<li><a href="https://support.microsoft.com/en-us/office/get-started-with-sharepoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261">Getting Started</a></li>
-												<li><a href="https://support.microsoft.com/en-us/office/introduction-to-lists-0a1c3ace-def0-44af-b225-cfa8d92c52d7">Sharepoint Lists</a></li>
-												<li><a href="https://kb.uwstout.edu/page.php?id=87749#:~:text=Creating%20a%20SharePoint%20Calendar&text=Once%20you%20are%20on%20the,and%20select%20Add%20an%20App.&text=You%20will%20be%20presented%20with,Name%20your%20calendar.">Sharepoint Calendar</a></li>
-												<li><a href="https://support.microsoft.com/en-us/office/introduction-to-infopath-forms-services-e599b4f0-1d1d-4249-8251-5d28afb648d8">InfoPath Intro</a></li>
-												
+												<li><a href="https://github.com/jhmejia/superfrog-scheduler">SuperFrog Student Scheduler GitHub</a></li>
+                                                <li><a href="https://www.youtube.com/watch?v=uW-3g06aQNE">Demo Video</a></li>
+                                                <li><a href="https://superfrogscheduler.xyz/">SuperFrogScheduler Website</a></li>
 											</ul>
 										</section>
 									</div>
@@ -199,7 +216,7 @@
 					<div class="title">Other Projects</div>
 					<div class="container">
 						<div class="row aln-center">
-							<div class="col-3 col-12-medium">
+                            <div class="col-3 col-12-medium">
 								<section class="highlight">
 									<a href="layerlaserdefense.html" class="image featured"><img src="images/LLD.jpg" alt="" /></a>
 									<h3><a href="layerlaserdefense.html">Layered Laser Defense</a></h3>
@@ -209,13 +226,23 @@
 									</ul>
 								</section>
 							</div>
-							<div class="col-3 col-12-medium">
+                            <div class="col-3 col-12-medium">
 								<section class="highlight">
 									<a href="iosapps.html" class="image featured"><img src="images/Swift-Logo.jpg" alt="" /></a>
 									<h3><a href="iosapps.html">IOS Apps</a></h3>
 									<p>I developed clones of popular apps such as Twitter and Instagram.</p>
 									<ul class="actions">
 										<li><a href="iosapps.html" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-3 col-12-medium">
+								<section class="highlight">
+									<a href="sharepoint.html" class="image featured"><img src="images/sharepoint.png" alt="" /></a>
+									<h3><a href="sharepoint.html">Sharepoint Site</a></h3>
+									<p>I was tasked with creating and administering a new Sharepoint site equipped with Infopath forms.</p>
+									<ul class="actions">
+										<li><a href="sharepoint.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
@@ -249,6 +276,7 @@
 										<li><a href="discordbot.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -300,16 +328,16 @@
 											<section>
 												<h3 class="icon solid fa-address-card">Business</h3>
 												<p>
-													<a href="https://www.linkedin.com/in/john-nguyen-2b8315191/">LinkedIn</a><br />
+                                                    <a href="https://www.linkedin.com/in/john-nguyen-2b8315191/">LinkedIn</a><br />
 													<a href="https://github.com/J4ninja">Github</a><br />
 												</p>
 											</section>
 										</div>
-										<div class="col-6 col-12-small">
+										<div class="col-6 col-14-small">
 											<section>
 												<h3 class="icon solid fa-comment">Social</h3>
 												<p>
-													<a href="https://www.instagram.com/j4.nguyen/">Instagram</a>
+													<a href="https://www.instagram.com/j4.nguyen/">Instagram</a><br />
 													<a href="https://www.facebook.com/profile.php?id=100065121758952">Facebook</a>
 												</p>
 											</section>
