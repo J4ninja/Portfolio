@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>SuperFrog Student Scheduler - John Nguyen</title>
+		<title>ClassifAI - John Nguyen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel='shortcut icon' type='image/png' href='images/favicon-32x32.png' />
@@ -21,7 +21,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Superfrog Student Scheduler</a></h1>
+							<h1><a href="index.html">ClassifAI</a></h1>
 							<p></p>
 						</div>
 
@@ -63,21 +63,11 @@
 										<article class="box post">
 											<h2>Introduction</h2>
 											<p>
-                                                While taking the Web Technologies course at TCU, we were assigned a group project. The assignment was
-                                                to develop a full functioning website. This website would be used to schedule a SuperFrog Student Appearance 
-                                                (TCU's Mascot). This is important to TCU as their policy mandates that there can only be one SuperFrog in the 
-                                                world at any time. We would need to create forms for customers to request an appearance for events such as weddings
-                                                and sporting events. Then we needed a database to store these forms and create student and admin accounts to manage 
-                                                these forms. With six members on our team, we each became fullstack developers working with Vue.js as our frontend
-                                                and Spring Boot as our backend.
+                                                While taking the Software Engineering and Senior design course at TCU, we were assigned a group project. The assignment was
+                                                to redesign an artificial intelligence (AI) website. This website would be used by teachers to analyze how effective their lectures are by measuring
+												student engagement and the teachers' questions. The goal of the project was to enhance the UI/UX, find or train a cost-efficient AI speech-to-text model to be hosted locally, 
+												and deploy it live on TCU's servers to the public. Throughout the project, we met with clients directly every week to provide updates and get regular feedback.
 											</p>
-                                            <h2>API-First Approach</h2>
-                                            <p>
-                                                Our team believed in the API-first approach. APIs are the contract between the frontend and backend developers. 
-                                                This approach allows developers to work independently of each other and work solely to developing features that utilize the API.
-                                                We wanted our API to be RESTful. We developed our API documentation using a yml file. The API was written before any single
-                                                line of code was written.
-                                            </p>
 											<h2>Agile Workflow</h2>
 											<p>
 											-Created User stories on GitHub issues and assigned to a team member<br>
@@ -86,51 +76,50 @@
 											-Communicated story status<br>
 											-Merged branches onto file project<br>
 											</p>
+											<h2>AI Models</h2>
+                                            <p>
+                                                Given the legacy AI model of assembly, we found that the results could be more accurate. Our AI engineer researched other free models and settled on OpenAI's whisper for transcription with 
+												an extension to get diarization (distinguishing speakers). Later, another model from Meta, Llama3 was added to analyze the questions based on Costa's level of understanding and summarize the text.
+                                            </p>
 											<h2>Backend</h2>
 											<p>
-                                                The backend was built using Spring Boot (Java). Using the Spring Framework, we can easily manage dependencies by having Spring inject them. We had the 
-                                                Spring JPA repository handle our database by automatically converting our annotated entities into SQL tables. The backend was developed using the Test 
-                                                Driven Development schema. I would write out tests before writing a feature then implement just enough code to pass the test. After writing a feature, I 
-                                                would launch the app locally and used Postman to mimic the API calls. The backend would also handle security. Authorization and authentication using a JWT
-                                                was our choice.
+                                                The backend was built using Express.JS and MongoDB and completely replaced the old system which was using only AWS calls. As a frontend developer, I designed the API and had the backend developer agree on it. 
+												I would further test the API calls on the frontend and check for database updates. The API had to be able to perform CRUD for reports and files as well as pass these reports and files to the 
+												AI model. 
 											</p>
                                             <h2>Frontend</h2>
                                             <p>
-                                                The frontend was built using Vue.js. We componentized parts of the website to be able to reuse any components on our pages. Vue components contain 
-                                                HTML elements, css scoped styles pertaining to that component, and JavaScript to create Vue instances and mount data and functions onto an app. The frontend made API 
-                                                calls using the axios library. 
+                                                The frontend was built using React.js. The legacy code was poorly designed with components exceeding several thousand lines of code. I had to refactor the code into 
+												separate folders and components to ease later feature development. Furthermore, to future-proof the project, I updated the builder to use Vite instead of create react app. 
+												Additionally, the site had no landing page as users were thrown into a login screen. I designed a landing page detailing the features and developers for the project. As the team developed the API, I implemented the API calls into the frontend features. Since the frontend 
+												was the last point of connection, I had to test essentially all of the team's work to see if we could connect the backend and AI model with the frontend server. Finally, 
+												I found several libraries to enhance the look and feel of basic textfields, date selectors and more.
                                             </p>
 											<h2>Conclusion</h2>
 											<p>
-                                                This course was a great introduction to fullstack development with a team. The instructor laid out the documentation to mimic a client request for an application.
-                                                After that, the team was left with no starter code and had to figure out how to work together. I learned that when working with a member that isn't performing their assigned task,
-                                                we shouldn't just boss them around. We should convince them of the overall benefit of performing their task, be understanding if they are lost and offer help if necessary. There were
-                                                many times where we peer programmed. Git branches were very important in the success of our independent development. Overall, the project was a success and we received full credit. 
-                                                Additionally, we hosted it fully online!
-											</p>
-	
-                                            <h2>Demo Video</h2>
-                                            <iframe width="500" height="315" src="https://www.youtube.com/embed/uW-3g06aQNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-											</p>
+                                                This project was a great way to gain experience developing a real life application and working with clients directly. I thoroughly enjoyed developing a relevant application in AI 
+												and transforming the product into something even my fellow friends would enjoy using and implementing uses into their daily life. The team has earned the Best Undergraduate Poster Presentation
+												at the College of Science and Engineering Student Research Symposium!
+											</p>                             
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Landing Page</h2>
+														<h2>Main Dashboard</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/superfroglandingpage.png" alt="" /></a>
-													<p>Landing page</p>
+													<a href="#" class="image featured"><img src="images/transcription.png" alt="" /></a>
+													<p>A view of the transcription tab on the main analysis dashboard</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>API</h2>
+														<h2>Architecture</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/API_Doc.png" alt="" /></a>
+													<a href="#" class="image featured"><img src="images/classifai_architecture.png" alt="" /></a>
 
-													<p>Sample of API documentation</p>
+													<p>System Architecture</p>
 
 												</section>
 											</div>
@@ -150,9 +139,33 @@
 											<ul class="style2">
 												<li>
 													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Dr. Liran Ma - Researcher and Tester</a></h3>
+														<p>Provided regular feedback on AI and database.</p>
+														<br>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Dr. Michael Faggella Luby - Client and Researcher</a></h3>
+														<p>Provided sample test data for the AI and tested product.</p>
+														<br>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Dr. Curby Alexander - Client and Researcher</a></h3>
+														<p>Provided feedback and tested product.</p>
+														<br>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/linkedinpfp.jfif" alt="" /></a>
-														<h3><a href="#">John Nguyen - Lead</a></h3>
-														<p>Assigned use cases, developed backend, and assisted in frontend</p>
+														<h3><a href="#">John Nguyen - Co-Lead</a></h3>
+														<p>Assigned use cases, developed frontend features.</p>
 														<br>
 													</article>
 												</li>
@@ -161,7 +174,7 @@
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
 														<h3><a href="#">John Henry Meija - Co-Lead</a></h3>
-														<p>Wrote RESTful API, developed pricing page, range page, admin view of requests</p>
+														<p>Researched, fine-tuned, and developed API for the AI models.</p>
 														<br>
 													</article>
 												</li>
@@ -169,8 +182,8 @@
                                                 <li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Mann Patel - Fullstack Developer</a></h3>
-														<p>Handled CSS and developed student portal</p>
+														<h3><a href="#">Taylor Griffin - Backend Developer</a></h3>
+														<p>Developed backend API calls using Express.JS.</p>
 														<br>
 													</article>
 												</li>
@@ -178,8 +191,8 @@
                                                 <li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Ty Donelly - Fullstack Developer</a></h3>
-														<p>Created Appearance Request Forms</p>
+														<h3><a href="#">Jaxon Hill - Information Tech</a></h3>
+														<p>Setup server deployment and database.</p>
 														<br>
 													</article>
 												</li>
@@ -187,8 +200,8 @@
                                                 <li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Ali Gasmali - Fullstack Developer</a></h3>
-														<p>Handled student and admin account creation</p>
+														<h3><a href="#">Nagato Kadoya - Frontend Developer</a></h3>
+														<p>Developed UI/UX Enhancements.</p>
 														<br>
 													</article>
 												</li>
@@ -200,9 +213,7 @@
 												<h2>Resources</h2>
 											</header>
 											<ul class="style3">
-												<li><a href="https://github.com/jhmejia/superfrog-scheduler">SuperFrog Student Scheduler GitHub</a></li>
-                                                <li><a href="https://www.youtube.com/watch?v=uW-3g06aQNE">Demo Video</a></li>
-                                                <li><a href="https://superfrogscheduler.xyz/">SuperFrogScheduler Website</a></li>
+                                                <li><a href="https://classifai.tcu.edu/">ClassifAI Website</a></li>
 											</ul>
 										</section>
 									</div>
@@ -229,11 +240,11 @@
 							</div>
 							<div class="col-3 col-12-medium">
 								<section class="highlight">
-									<a href="classfiai.html" class="image featured"><img src="images/classifailogo.png" alt="" /></a>
-									<h3><a href="classfiai.html">ClassifAI</a></h3>
-									<p>I co-led a team to build an artificial intelligence tool to transcribe and analyze audio/video for teachers.</p>
+									<a href="superfrogscheduler.html" class="image featured"><img src="images/superfroglandingpage.png" alt="" /></a>
+									<h3><a href="superfrogscheduler.html">Superfrog Student Scheduler</a></h3>
+									<p>I co-led a team of fullstack developers to make a scheduling website using Vue.js and Spring Boot.</p>
 									<ul class="actions">
-										<li><a href="classfiai.html" class="button style1">Learn More</a></li>
+										<li><a href="superfrogscheduler.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
