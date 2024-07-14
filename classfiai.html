@@ -63,21 +63,11 @@
 										<article class="box post">
 											<h2>Introduction</h2>
 											<p>
-                                                While taking the Web Technologies course at TCU, we were assigned a group project. The assignment was
-                                                to develop a full functioning website. This website would be used to schedule a SuperFrog Student Appearance 
-                                                (TCU's Mascot). This is important to TCU as their policy mandates that there can only be one SuperFrog in the 
-                                                world at any time. We would need to create forms for customers to request an appearance for events such as weddings
-                                                and sporting events. Then we needed a database to store these forms and create student and admin accounts to manage 
-                                                these forms. With six members on our team, we each became fullstack developers working with Vue.js as our frontend
-                                                and Spring Boot as our backend.
+                                                While taking the Software Engineering and Senior design course at TCU, we were assigned a group project. The assignment was
+                                                to redesign an artificial intelligence (AI) website. This website would be used by teachers to analyze how effective their lectures are by measuring
+												student engagement and the teachers' questions. The goal of the project was to enhance the UI/UX, find or train a cost-efficient AI speech-to-text model to be hosted locally, 
+												and deploy it live on TCU's servers to the public. Throughout the project, we met with clients directly every week to provide updates and get regular feedback.
 											</p>
-                                            <h2>API-First Approach</h2>
-                                            <p>
-                                                Our team believed in the API-first approach. APIs are the contract between the frontend and backend developers. 
-                                                This approach allows developers to work independently of each other and work solely to developing features that utilize the API.
-                                                We wanted our API to be RESTful. We developed our API documentation using a yml file. The API was written before any single
-                                                line of code was written.
-                                            </p>
 											<h2>Agile Workflow</h2>
 											<p>
 											-Created User stories on GitHub issues and assigned to a team member<br>
@@ -86,6 +76,13 @@
 											-Communicated story status<br>
 											-Merged branches onto file project<br>
 											</p>
+											<h2>AI Models</h2>
+                                            <p>
+                                                Our team believed in the API-first approach. APIs are the contract between the frontend and backend developers. 
+                                                This approach allows developers to work independently of each other and work solely to developing features that utilize the API.
+                                                We wanted our API to be RESTful. We developed our API documentation using a yml file. The API was written before any single
+                                                line of code was written.
+                                            </p>
 											<h2>Backend</h2>
 											<p>
                                                 The backend was built using Spring Boot (Java). Using the Spring Framework, we can easily manage dependencies by having Spring inject them. We had the 
@@ -96,9 +93,11 @@
 											</p>
                                             <h2>Frontend</h2>
                                             <p>
-                                                The frontend was built using Vue.js. We componentized parts of the website to be able to reuse any components on our pages. Vue components contain 
-                                                HTML elements, css scoped styles pertaining to that component, and JavaScript to create Vue instances and mount data and functions onto an app. The frontend made API 
-                                                calls using the axios library. 
+                                                The frontend was built using React.js. The legacy code was poorly designed with components exceeding several thousand lines of code. I had to refactor the code into 
+												separate folders and components to ease later feature development. Additionally, the site had no landing page as users were thrown into a login screen. I designed a 
+												landing page detailing the features and developers for the project. As the team developed the API, I implemented the API calls into the frontend features. Since the frontend 
+												was the last point of connection, I had to test essentially all of the team's work to see if we could connect the backend and AI model with the frontend server. Finally, 
+												I found several libraries to enhance the look and feel of basic textfields, date selectors and more.
                                             </p>
 											<h2>Conclusion</h2>
 											<p>
@@ -107,30 +106,26 @@
                                                 we shouldn't just boss them around. We should convince them of the overall benefit of performing their task, be understanding if they are lost and offer help if necessary. There were
                                                 many times where we peer programmed. Git branches were very important in the success of our independent development. Overall, the project was a success and we received full credit. 
                                                 Additionally, we hosted it fully online!
-											</p>
-	
-                                            <h2>Demo Video</h2>
-                                            <iframe width="500" height="315" src="https://www.youtube.com/embed/uW-3g06aQNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-											</p>
+											</p>                             
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Landing Page</h2>
+														<h2>Main Dashboard</h2>
 													</header>
 													<a href="#" class="image featured"><img src="images/superfroglandingpage.png" alt="" /></a>
-													<p>Landing page</p>
+													<p>A view of the transcription tab on the main analysis dashboard</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>API</h2>
+														<h2>Architecture</h2>
 													</header>
 													<a href="#" class="image featured"><img src="images/API_Doc.png" alt="" /></a>
 
-													<p>Sample of API documentation</p>
+													<p>System Architecture</p>
 
 												</section>
 											</div>
@@ -151,8 +146,8 @@
 												<li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/linkedinpfp.jfif" alt="" /></a>
-														<h3><a href="#">John Nguyen - Lead</a></h3>
-														<p>Assigned use cases, developed backend, and assisted in frontend</p>
+														<h3><a href="#">John Nguyen - Co-Lead</a></h3>
+														<p>Assigned use cases, developed frontend features</p>
 														<br>
 													</article>
 												</li>
@@ -161,7 +156,7 @@
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
 														<h3><a href="#">John Henry Meija - Co-Lead</a></h3>
-														<p>Wrote RESTful API, developed pricing page, range page, admin view of requests</p>
+														<p>Researched, fine-tuned, and developed API for the AI models.</p>
 														<br>
 													</article>
 												</li>
@@ -169,8 +164,8 @@
                                                 <li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Mann Patel - Fullstack Developer</a></h3>
-														<p>Handled CSS and developed student portal</p>
+														<h3><a href="#">Taylor Griffin - Backend Developer</a></h3>
+														<p>Developed backend API calls using Express.JS</p>
 														<br>
 													</article>
 												</li>
@@ -178,8 +173,8 @@
                                                 <li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Ty Donelly - Fullstack Developer</a></h3>
-														<p>Created Appearance Request Forms</p>
+														<h3><a href="#">Jaxon Hill - Information Tech</a></h3>
+														<p>Setup server deployment and database.</p>
 														<br>
 													</article>
 												</li>
@@ -187,7 +182,7 @@
                                                 <li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Ali Gasmali - Fullstack Developer</a></h3>
+														<h3><a href="#">Nagato Kadoya - Fullstack Developer</a></h3>
 														<p>Handled student and admin account creation</p>
 														<br>
 													</article>
