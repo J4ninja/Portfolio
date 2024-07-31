@@ -64,64 +64,61 @@
 										<article class="box post">
 											<h2>Introduction</h2>
 											<p>
-                                                While taking the Software Engineering and Senior design course at TCU, we were assigned a group project. The assignment was
-                                                to redesign an artificial intelligence (AI) website. This website would be used by teachers to analyze how effective their lectures are by measuring
-												student engagement and the teachers' questions. The goal of the project was to enhance the UI/UX, find or train a cost-efficient AI speech-to-text model to be hosted locally, 
-												and deploy it live on TCU's servers to the public. Throughout the project, we met with clients directly every week to provide updates and get regular feedback.
+                                                For my Honor’s Thesis, I derived an interdisciplinary project in computer science and astronomy. Under Dr. Peter Frinchaboy, 
+												I worked on enhancing the Binary INformation from Open Clusters using Spectral Energy Distribution (BINOCS) project, a method for 
+												detecting binary systems in stellar groups. The objective was to update the software to functionally work with Gaia data release 3’s 
+												spectroscopic data.
 											</p>
-											<h2>Agile Workflow</h2>
+											<h2>Software Enhancements</h2>
 											<p>
-											-Created User stories on GitHub issues and assigned to a team member<br>
-											-Worked on indepedent feature branches<br>
-											-Performed pull requests and reviews<br>
-											-Communicated story status<br>
-											-Merged branches onto file project<br>
+											-Automated Data Collection across Gaia, 2MASS, and AllWiSE<br>
+											-Updated I/O File formats to support .csv and .fits<br>
+											-Updated code to support Python3 instead of Python2<br>
+											-Implmented Object Oriented Programing practices and updated library to use relative imports<br>
+											-Added a Graphic User Interface, eliminating the need for config files<br>
+											-Command Line options to streamline all tasks into one executable<br>
 											</p>
-											<h2>AI Models</h2>
+											<h2>Testing Accuracy</h2>
                                             <p>
-                                                Given the legacy AI model of assembly, we found that the results could be more accurate. Our AI engineer researched other free models and settled on OpenAI's whisper for transcription with 
-												an extension to get diarization (distinguishing speakers). Later, another model from Meta, Llama3 was added to analyze the questions based on Costa's level of understanding and summarize the text.
+                                               The enhanced software was tested on the same set of clusters against the old version to compare accuracy. It resulted in a 81% match for the same binary classification flag. 
+											   The mismatch is likely because the data catalogs might have crossmatched the wrong AllWISE data to the source object, affecting the delta.
+											   103 New classifications were made on stars that didn't have data before but was available in the new catalog but classifications were also lost/inconclusive if the online catalog was missing data.
                                             </p>
-											<h2>Backend</h2>
+											<h2>Future Iterations</h2>
 											<p>
-                                                The backend was built using Express.JS and MongoDB and completely replaced the old system which was using only AWS calls. As a frontend developer, I designed the API and had the backend developer agree on it. 
-												I would further test the API calls on the frontend and check for database updates. The API had to be able to perform CRUD for reports and files as well as pass these reports and files to the 
-												AI model. 
-											</p>
-                                            <h2>Frontend</h2>
-                                            <p>
-                                                The frontend was built using React.js. The legacy code was poorly designed with components exceeding several thousand lines of code. I had to refactor the code into 
-												separate folders and components to ease later feature development. Furthermore, to future-proof the project, I updated the builder to use Vite instead of create react app. 
-												Additionally, the site had no landing page as users were thrown into a login screen. I designed a landing page detailing the features and developers for the project. As the team developed the API, I implemented the API calls into the frontend features. Since the frontend 
-												was the last point of connection, I had to test essentially all of the team's work to see if we could connect the backend and AI model with the frontend server. Finally, 
-												I found several libraries to enhance the look and feel of basic textfields, date selectors and more.
-                                            </p>
-											<h2>Conclusion</h2>
-											<p>
-                                                This project was a great way to gain experience developing a real life application and working with clients directly. I thoroughly enjoyed developing a relevant application in AI 
-												and transforming the product into something even my fellow friends would enjoy using and implementing uses into their daily life. The team has earned the Best Undergraduate Poster Presentation
-												at the College of Science and Engineering Student Research Symposium!
-											</p>                             
+												Currently, no new classifications for different clusters have been made. 
+												Unfortunately, I have not been able to finish the formatting of isochrones, thus no new clusters 
+												have been classified since they are dependent on a set of isochrones to be formatted. BINOCS 
+												also needs to be updated to support a newer set of isochrone catalog versions from PARSEC. 
+												The new software still utilizes the same old filter set; however, it is possible that GaiaXPy will 
+												have more filter sets accessible that can be integrated into the fitting algorithm. Future work will 
+												need to be done if a different set of filters would like to be used. A nice to have feature would be 
+												to extend this project to a public web app for accessibility. To aid astronomers around the world, 
+												I dream of this project being live on a website, with a backend supporting the API to query to 
+												databases, build data files, and run the fitting algorithm. This way, users don’t have to deal with 
+												installing the software and its packages. My hope is that this project is continued if I am no 
+												longer supporting its feature development so that astronomers around the world can classify 
+												binary star systems and obtain useful information for investigation of dark matter in nearby 
+												dwarf galaxies 
+											</p>                       
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Main Dashboard</h2>
+														<h2>GUI on Build Data Tab</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/transcription.png" alt="" /></a>
-													<p>A view of the transcription tab on the main analysis dashboard</p>
+													<a href="#" class="image featured"><img src="images/binocsgui.png" alt="" /></a>
+													<p>A view of the build data tab used to query the online catalogs for stars to classify.</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Architecture</h2>
+														<h2>Command Line Options</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/classifai_architecture.png" alt="" /></a>
-
-													<p>System Architecture</p>
-
+													<a href="#" class="image featured"><img src="images/binocscmdline.png" alt="" /></a>
+													<p>Command Line Options on the binocs executable.</p>
 												</section>
 											</div>
 										</div>
@@ -164,6 +161,9 @@
 											</header>
 											<ul class="style3">
                                                 <li><a href="images/HonorsPaper.pdf">Honors Thesis Paper</a></li>
+											</ul>
+											<ul class="style3">
+                                                <li><a href="https://github.com/J4ninja/BINOCS_GAIA_Calibration">GitHub Repository</a></li>
 											</ul>
 										</section>
 									</div>
