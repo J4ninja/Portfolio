@@ -7,12 +7,11 @@
 -->
 <html>
 	<head>
-		<title>Raspberry Pi Motion Sensor - John Nguyen</title>
+		<title>ClassifAI - John Nguyen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel='shortcut icon' type='image/png' href='images/favicon-32x32.png' />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -22,7 +21,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Raspberry Pi Motion Sensor</a></h1>
+							<h1><a href="index.html">ClassifAI</a></h1>
 							<p></p>
 						</div>
 
@@ -39,7 +38,7 @@
 									<li><a href="classifai.html">ClassifAI</a></li>
 									<li><a href="superfrogscheduler.html">SuperFrog Student Scheduler</a></li>
 									<li><a href="binocs.html">BINOCS Enhancements</a></li>
-									<li><a href="iosapps.html">IOS Apps</a></li>
+                                    <li><a href="iosapps.html">IOS Apps</a></li>
                                     <li><a href="sharepoint.html">Sharepoint</a></li>
                                     <li><a href="windowsautomation.html">Windows Automation</a></li>
                                     <li><a href="raspberrypimotionsensor.html">Raspberry Pi Motion Sensor</a></li>
@@ -64,86 +63,65 @@
 									<div id="content">
 										<article class="box post">
 											<h2>Introduction</h2>
-											<p>This personal project was executed under the inspiration of a Youtube video and is not an original product. After 
-												recently encountering the Python programming language and joining the STEM club in high school, my friend and I
-												were looking to dedicate ourselves to project-based learning. This was our first project. 
-												Given a Raspberry Pi 3 from the club, we researched projects involving the device. In the end we chose to create a 
-												motion sensor camera equipped with an automated notification system.
-											</p>
-											<h2>Project Equipment Requirements</h2>
 											<p>
-											-Raspberry Pi device <br>
-											-Raspberry Pi compatible camera <br> 
-											-USB mouse and keyboard <br>
+                                                While taking the Software Engineering and Senior design course at TCU, we were assigned a group project. The assignment was
+                                                to redesign an artificial intelligence (AI) website. This website would be used by teachers to analyze how effective their lectures are by measuring
+												student engagement and the teachers' questions. The goal of the project was to enhance the UI/UX, find or train a cost-efficient AI speech-to-text model to be hosted locally, 
+												and deploy it live on TCU's servers to the public. Throughout the project, we met with clients directly every week to provide updates and get regular feedback.
 											</p>
-											<h2>Project Tasks</h2>
+											<h2>Agile Workflow</h2>
 											<p>
-											-The Pi must be able to detect motion <br>
-											-The camera must take a picture once motion has been detected <br>
-											-The captured image must draw an outline over the moving object in question<br>
-											-The captured image must be emailed to the end-user in a timely manner<br>
+											-Created User stories on GitHub issues and assigned to a team member<br>
+											-Worked on indepedent feature branches<br>
+											-Performed pull requests and reviews<br>
+											-Communicated story status<br>
+											-Merged branches onto file project<br>
 											</p>
-											<h2>Some Test Results</h2>
-											<br>
-											<div id="slider">
-												<div id="headerslider" class="carousel slide" data-ride="carousel">
-													<ol class="carousel-indicators">
-													  <li data-target="#headerslider" data-slide-to="0" class="active"></li>
-													  <li data-target="#headerslider" data-slide-to="1"></li>
-													  <li data-target="#headerslider" data-slide-to="2"></li>
-													</ol>
-													<div class="carousel-inner">
-													  <div class="carousel-item active">
-														<img class="d-block img-fluid" src="images/testresult1.jpg" alt="First slide">
-													  </div>
-													  <div class="carousel-item">
-														<img class="d-block img-fluid" src="images/testresult2.jpg" alt="Second slide">
-													  </div>
-													  <div class="carousel-item">
-														<img class="d-block img-fluid" src="images/testresult3.jpg" alt="Third slide">
-													  </div>
-													</div>
-													<a class="carousel-control-prev" href="#headerslider" role="button" data-slide="prev">
-													  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-													  <span class="sr-only">Previous</span>
-													</a>
-													<a class="carousel-control-next" href="#headerslider" role="button" data-slide="next">
-													  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-													  <span class="sr-only">Next</span>
-													</a>
-												  </div>
-												</div>
-												<br>
-												<h2>Conclusion</h2>
+											<h2>AI Models</h2>
+                                            <p>
+                                                Given the legacy AI model of assembly, we found that the results could be more accurate. Our AI engineer researched other free models and settled on OpenAI's whisper for transcription with 
+												an extension to get diarization (distinguishing speakers). Later, another model from Meta, Llama3 was added to analyze the questions based on Costa's level of understanding and summarize the text.
+                                            </p>
+											<h2>Backend</h2>
 											<p>
-											The project's success rate was rather random. Our test results were elastic. Failures include boxes drawn over incorrect objects, boxes not covering entire bodies, and no notification alerts during some movement.
-											We believe it depended on the amount of light, distance, and time the movement took place in front of the camera. 
-											Some improvements that could have taken place were to make a dedicated case,
-											finding a way to host the program without manaully starting it, and finding the root trigger for the alerts. 
-											Despite, its inconsistencies, the project was a great learning experience.
+                                                The backend was built using Express.JS and MongoDB and completely replaced the old system which was using only AWS calls. As a frontend developer, I designed the API and had the backend developer agree on it. 
+												I would further test the API calls on the frontend and check for database updates. The API had to be able to perform CRUD for reports and files as well as pass these reports and files to the 
+												AI model. 
 											</p>
-
-											
+                                            <h2>Frontend</h2>
+                                            <p>
+                                                The frontend was built using React.js. The legacy code was poorly designed with components exceeding several thousand lines of code. I had to refactor the code into 
+												separate folders and components to ease later feature development. Furthermore, to future-proof the project, I updated the builder to use Vite instead of create react app. 
+												Additionally, the site had no landing page as users were thrown into a login screen. I designed a landing page detailing the features and developers for the project. As the team developed the API, I implemented the API calls into the frontend features. Since the frontend 
+												was the last point of connection, I had to test essentially all of the team's work to see if we could connect the backend and AI model with the frontend server. Finally, 
+												I found several libraries to enhance the look and feel of basic textfields, date selectors and more.
+                                            </p>
+											<h2>Conclusion</h2>
+											<p>
+                                                This project was a great way to gain experience developing a real life application and working with clients directly. I thoroughly enjoyed developing a relevant application in AI 
+												and transforming the product into something even my fellow friends would enjoy using and implementing uses into their daily life. The team has earned the Best Undergraduate Poster Presentation
+												at the College of Science and Engineering Student Research Symposium!
+											</p>                             
 										</article>
 										<div class="row gtr-150">
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Raspberry Pi Case</h2>
+														<h2>Main Dashboard</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/raspberrypiwithcase.jpg" alt="" /></a>
-													<p>No case was developed for the Pi. We used the official Raspberry Pi case.</p>
-													
+													<a href="#" class="image featured"><img src="images/transcription.png" alt="" /></a>
+													<p>A view of the transcription tab on the main analysis dashboard</p>
 												</section>
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
 													<header>
-														<h2>Raspberry Pi Camera</h2>
+														<h2>Architecture</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/raspberrypicamera.jpg" alt="" /></a>
-													<p>This device was attached to the Pi to enable image capturing.</p>
-												
+													<a href="#" class="image featured"><img src="images/classifai_architecture.png" alt="" /></a>
+
+													<p>System Architecture</p>
+
 												</section>
 											</div>
 										</div>
@@ -163,23 +141,69 @@
 												<li>
 													<article class="box post-excerpt">
 														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
-														<h3><a href="#">Hacker Shack</a></h3>
-														<p>Author of source code. No affiliation.</p>
+														<h3><a href="#">Dr. Liran Ma - Researcher and Tester</a></h3>
+														<p>Provided regular feedback on AI and database.</p>
 														<br>
 													</article>
 												</li>
 												<li>
 													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/john.jpg" alt="" /></a>
-														<h3><a href="#">John Nguyen -  Project Executer</a></h3>
-														<p>Set up and implemented code onto Raspberry Pi.</p>
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Dr. Michael Faggella Luby - Client and Researcher</a></h3>
+														<p>Provided sample test data for the AI and tested product.</p>
+														<br>
 													</article>
 												</li>
 												<li>
 													<article class="box post-excerpt">
-														<a href="#" class="image left"><img src="images/arthur25.jpg" alt="" /></a>
-														<h3><a href="#">Arthur Rosa - Project Partner</a></h3>
-														<p>Primary testor and configurator of notification system.</p>
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Dr. Curby Alexander - Client and Researcher</a></h3>
+														<p>Provided feedback and tested product.</p>
+														<br>
+													</article>
+												</li>
+												<li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/linkedinpfp.jfif" alt="" /></a>
+														<h3><a href="#">John Nguyen - Co-Lead</a></h3>
+														<p>Assigned use cases, developed frontend features.</p>
+														<br>
+													</article>
+												</li>
+											
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">John Henry Meija - Co-Lead</a></h3>
+														<p>Researched, fine-tuned, and developed API for the AI models.</p>
+														<br>
+													</article>
+												</li>
+
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Taylor Griffin - Backend Developer</a></h3>
+														<p>Developed backend API calls using Express.JS.</p>
+														<br>
+													</article>
+												</li>
+
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Jaxon Hill - Information Tech</a></h3>
+														<p>Setup server deployment and database.</p>
+														<br>
+													</article>
+												</li>
+
+                                                <li>
+													<article class="box post-excerpt">
+														<a href="#" class="image left"><img src="images/pic08.jpg" alt="" /></a>
+														<h3><a href="#">Nagato Kadoya - Frontend Developer</a></h3>
+														<p>Developed UI/UX Enhancements.</p>
+														<br>
 													</article>
 												</li>
 											</ul>
@@ -190,8 +214,7 @@
 												<h2>Resources</h2>
 											</header>
 											<ul class="style3">
-												<li><a href="https://www.youtube.com/watch?v=Y2QFu-tTvTI">Youtube Tutorial</a></li>
-												<li><a href="https://github.com/HackerShackOfficial/Smart-Security-Camera">Hacker Shack Github</a></li>
+                                                <li><a href="https://classifai.tcu.edu/">ClassifAI Website</a></li>
 											</ul>
 										</section>
 									</div>
@@ -206,23 +229,13 @@
 					<div class="title">Other Projects</div>
 					<div class="container">
 						<div class="row aln-center">
-							<div class="col-3 col-12-medium">
+                            <div class="col-3 col-12-medium">
 								<section class="highlight">
 									<a href="layerlaserdefense.html" class="image featured"><img src="images/LLD.jpg" alt="" /></a>
 									<h3><a href="layerlaserdefense.html">Layered Laser Defense</a></h3>
 									<p>I was tasked with redesigning, implementing new features, and fixing bugs for the main laser turret executive GUI.</p>
 									<ul class="actions">
 										<li><a href="layerlaserdefense.html" class="button style1">Learn More</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-3 col-12-medium">
-								<section class="highlight">
-									<a href="classifai.html" class="image featured"><img src="images/classifailogo.png" alt="" /></a>
-									<h3><a href="classifai.html">ClassifAI</a></h3>
-									<p>I co-led a team to build an artificial intelligence tool to transcribe and analyze audio/video for teachers.</p>
-									<ul class="actions">
-										<li><a href="classifai.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
@@ -246,7 +259,7 @@
 									</ul>
 								</section>
 							</div>
-							<div class="col-3 col-12-medium">
+                            <div class="col-3 col-12-medium">
 								<section class="highlight">
 									<a href="iosapps.html" class="image featured"><img src="images/Swift-Logo.jpg" alt="" /></a>
 									<h3><a href="iosapps.html">IOS Apps</a></h3>
@@ -278,6 +291,17 @@
 							</div>
 							<div class="col-3 col-12-medium">
 								<section class="highlight">
+									<a href="raspberrypimotionsensor.html" class="image featured"><img src="images/raspberrypi.jpg" alt="" /></a>
+									<P></P>
+									<h3><a href="raspberrypimotionsensor.html">Raspberry Pi Motion Sensor</a></h3>
+									<p>My partner and I challenged ourselves in creating a motion sensor with automated notifications.</p>
+									<ul class="actions">
+										<li><a href="raspberrypimotionsensor.html" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-3 col-12-medium">
+								<section class="highlight">
 									<a href="discordbot.html" class="image featured"><img src="images/discord.png" alt="" /></a>
 									<h3><a href="discordbot.html">Discord Bot</a></h3>
 									<p>I created a personalized Discord Bot to bring enjoyment to a gaming community.</p>
@@ -285,6 +309,7 @@
 										<li><a href="discordbot.html" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -378,20 +403,15 @@
 					</div>
 				</div>
 			</section>
-
 		</div>
 
 		<!-- Scripts -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
 
 	</body>
 </html>
